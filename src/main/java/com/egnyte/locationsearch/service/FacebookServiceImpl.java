@@ -22,7 +22,7 @@ public class FacebookServiceImpl implements FacebookService {
 		ResponseList<Place> places = null;
 
         try {
-            places = facebook.searchPlaces((new StringBuffer(locationName).append(city).append(country).toString()), new Reading().fields("location", "name"));
+            places = facebook.searchPlaces((new StringBuffer(locationName).append(" ").append(city).append(" ").append(country).toString()), new Reading().fields("location", "name"));
         } catch (FacebookException e) {
             e.printStackTrace();
         }

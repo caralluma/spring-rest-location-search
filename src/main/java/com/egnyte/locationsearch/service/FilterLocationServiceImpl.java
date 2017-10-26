@@ -35,7 +35,7 @@ public class FilterLocationServiceImpl implements FilterLocationService {
             return resultList;
         }
         
-         resultList =  filteredPlaces.stream().map(p -> new Location(p.getName(), p.getLocation().getLatitude().floatValue(), p.getLocation().getLongitude().floatValue()))
+         resultList =  filteredPlaces.stream().map(p -> new Location(p.getName(), p.getLocation().getLongitude().floatValue(), p.getLocation().getLatitude().floatValue()))
         .collect(Collectors.toList());
 
         return resultList;
